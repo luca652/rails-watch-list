@@ -1,0 +1,12 @@
+<div>
+  <h1>Here is your list!</h1>
+  <h4><%= @list.name %></h4>
+  <% @list.bookmarks.each do |bookmark| %>
+    <ul>
+      <li>
+        <%= bookmark.movie.title %>
+        <%= bookmark.movie.overview %>
+      </li>
+    </ul>
+  <% end %>
+</div>
