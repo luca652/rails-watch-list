@@ -1,2 +1,15 @@
-<h1>All lists</h1>
-<p>Check out all these lists</p>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://ychef.files.bbci.co.uk/976x549/p01m51fc.jpg)">
+  <div class="container">
+    <h1>Look at them lists!!</h1>
+    <p>We have all sorts of lists down here</p>
+  </div>
+</div>
+<br>
+<div class="cards">
+  <% @lists.each do |list|%>
+     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://ychef.files.bbci.co.uk/1600x900/p0639frv.webp)">
+        <%= link_to list.name, list_path(list) %>
+     </div>
+  <% end %>
+</div>
