@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # post 'lists', to: 'lists#create'
   # get 'lists/:id', to: 'lists#show', as: 'list' do
   get root to: "lists#index"
-  resources :lists do
+  resources :lists, except: :index do
     resources :bookmarks, only: %i[new create]
     resources :movies
   end
